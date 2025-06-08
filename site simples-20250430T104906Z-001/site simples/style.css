@@ -1,0 +1,341 @@
+/* ==========================
+   FONTES PERSONALIZADAS
+========================== */
+@font-face {
+    font-family: 'BAD Grunge';
+    src: url('fonts/BAD GRUNGE.ttf') format('truetype');
+}
+
+/* ==========================
+   CONFIGURAÇÕES GERAIS DO BODY
+========================== */
+body {
+    background-color: #363636;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================
+   CABEÇALHO FIXO
+========================== */
+header {
+    background-color: #1C1C1C;
+    padding: 0px 0px 2px 0px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    position: fixed;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* ==========================
+   NAVEGAÇÃO (MENU)
+========================== */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+nav ul li {
+    margin-left: 20px;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #363636;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    padding: 5px;
+    display: inline-block;
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    color: #280606;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ==========================
+   CONTAINER DA IMAGEM DE TOPO
+========================== */
+.imagem-container {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin-top: 50px;
+}
+
+/* ==========================
+   TEXTO SOBREPOSTO À IMAGEM
+========================== */
+.texto-sobreposicao {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: darkred;
+    font-size: 140px;
+    font-weight: bold;
+    padding: 10px;
+    z-index: 2;
+    font-family: 'BAD Grunge', sans-serif;
+    -webkit-text-stroke: rgb(48, 48, 48);
+    -webkit-text-stroke-width: 0.0001px;
+}
+
+/* ==========================
+   LOGO
+========================== */
+.logo-imagem {
+    width: 100px;
+    height: 65px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-imagem:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ==========================
+   ESTRUTURA BÁSICA DE PÁGINA
+========================== */
+main {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
+/* ==========================
+   BLOCO SOBRE (TEXTO)
+========================== */
+.sobre-texto h1 {
+    margin-left: 20px;
+}
+
+.sobre-texto p {
+    margin-left: 20px;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+/* ==========================
+   IMAGEM À DIREITA (RESPONSIVO)
+   NÃO TOCAR MAIS NESSA PARTE DO CÓDIGO
+========================== */
+.imagem-direita {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.imagem-direita .texto {
+    flex: 1;
+    min-width: 250px;
+    max-width: 65%;
+    margin-left: 10px;
+    background-color: #1C1C1C;
+    color: lightgray;
+}
+
+.imagem-direita img {
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ==========================
+   LINKS DA WIKIPEDIA
+========================== */
+.wikipedia a {
+    color: crimson;
+    margin-left: 30px;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+/* ==========================
+   BLOCO CRIADOR
+========================== */
+.texto-criador {
+    color: lightgray;
+    margin-left: 20px;
+    background-color: #1C1C1C;
+    padding-left: 20PX;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.texto-criador p {
+    font-size: 20PX;
+    flex-direction: column;
+    display: block;
+}
+
+.texto-criador img {
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ==========================
+   BLOCO ARTE
+========================== */
+.texto-arte {
+    color: lightgray;
+    margin-left: 20px;
+    background-color: #1C1C1C;
+    padding-left: 20PX;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+/*--------------->parte dos cards<-----------------*/
+#arte .container-arte {
+    display: grid;
+    
+}
+
+
+/* ==========================
+   MEDIA QUERIES
+========================== */
+@media  (max-width: 768px) {
+    /* Ajustes de margens gerais */
+    body {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    /* Header responsivo */
+    header {
+        height: auto;
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .imagem-container img {
+        height: 300px;
+    }
+
+    .texto-sobreposicao {
+        font-size: 40px;
+    }
+
+    .logo-imagem {
+        width: 80px;
+    }
+
+    /* Imagem-direita responsiva */
+    .imagem-direita {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .imagem-direita .texto {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .imagem-direita img {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .texto-sobreposicao {
+        font-size: 30px;
+    }
+
+    .imagem-container img {
+        height: 250px;
+    }
+
+    .logo-imagem {
+        width: 70px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .imagem-direita .texto {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .imagem-container {
+        width: 100%;
+        max-width: 2000px;
+    }
+}
+    
